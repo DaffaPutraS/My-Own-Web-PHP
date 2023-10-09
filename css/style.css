@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&family=Poppins&display=swap');
+
+:root {
+    --main-color: #00113B;
+    --font-color: #00CFED;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --border:.2rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+@font-face {
+    font-family: poppins-reguler;
+    src: url(/font/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserrat-semibold;
+    src: url(/font/Montserrat-SemiBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Selection Block */
+*::-moz-selection {
+    background-color: var(--font-color);
+    color: var(--white);
+}
+
+*::selection {
+    background-color: var(--font-color);
+    color: var(--white);
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    height: 0.3rem;
+    width: 0.1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+/* HTML */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    background-color: #00113B;
+}
+
+/* HEADER */
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--main-color);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    padding: 1.5rem 2rem;
+}
+
+.header .flex .logo {
+    margin-right: auto;
+}
+
+.header .flex .logo img {
+    height: 5rem;
+    padding-left: 5rem;
+}
+
+.header .flex .navbar {
+    padding-left: 5rem;
+    padding-right: 1rem;
+}
+
+.header .flex .navbar a {
+    margin: 1rem;
+    font-size: 1.8rem;
+    color: rgb(219, 219, 219);
+    text-decoration: none;
+    font-family: poppins-reguler;
+}
+
+.header .flex .button-contact-header {
+    padding-right: 5rem;
+}
+
+.header .flex .button-contact-header a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1.8rem;
+    font-family: poppins-reguler;
+    border: 2px solid var(--font-color);
+    border-radius: 7px;
+    padding: 5px 10px;
+}
+
+.header .flex .navbar a:hover {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.header .flex .button-contact-header a:hover {
+    background-color: var(--font-color);
+    color: rgb(219, 219, 219);
+    transition: 0.2s;
+}
+
+#menu-btn {
+    display: none;
+    font-size: 2.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.header .flex .navbar.active{
+    background-color: var(--second-color);
+    display: block;
+}
+
+
+
+/* HOME */
+.home {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15rem;
+}
+
+.home .home-left {
+    margin-left: 13rem;
+    margin-right: 5rem;
+}
+
+.home-right {
+    margin-right: 15rem;
+    margin-left: 5rem;
+}
+
+.home .home-left p {
+    color: var(--font-color);
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.home .home-left h3 {
+    color: rgb(219, 219, 219);
+    font-size: 5rem;
+    font-family: montserrat-semibold;
+}
+
+.home .home-left h4 {
+    color: rgb(176, 176, 176);
+    font-size: 3.7rem;
+    font-family: poppins-reguler;
+}
+
+.home .home-left h5 {
+    color: rgb(162, 162, 162);
+    font-size: 1.5rem;
+    width: 400px;
+    margin-top: 2.5rem;
+    line-height: 1.5;
+}
+
+.home .home-left span {
+    color: var(--font-color);
+}
+
+
+.home-right img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid var(--font-color);
+}
+
+
+
+
+/* ABOUT */
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.title-about {
+    margin-top: 30rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.title-about h3 {
+    color: rgb(219, 219, 219);
+    font-family: poppins-reguler;
+    font-size: 3.5rem;
+}
+
+.about .about-vektor {
+    margin-left: 10rem;
+    
+}
+
+.about .about-description {
+    margin-right: 10rem;
+}
+
+.about .about-vektor img {
+    width: 400px;
+    height: 400px;
+}
+
+.about .about-description p {
+    color: rgb(176, 176, 176);
+    width: 400px;
+    font-size: 1.7rem;
+    margin-top: 4rem;
+    line-height: 2;
+}
+
+/* CONTACT */
+.contact-title {
+    margin-top: 30rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.contact-title h3 {
+    color: rgb(219, 219, 219);
+    font-size: 3.5rem;
+    font-family: poppins-reguler;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+}
+
+.contact .whatsapp i{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: var(--font-color);
+    font-size: 80px;
+}
+
+.contact .whatsapp h3 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: rgb(219, 219, 219);
+}
+
+.contact .email i {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: var(--font-color);
+    font-size: 80px;
+}
+
+.contact .email h3 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: rgb(219, 219, 219);
+}
+
+.contact .linkedin i {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: var(--font-color);
+    font-size: 80px;
+}
+
+.contact .linkedin h3 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: rgb(219, 219, 219);
+}
+
+.contact .github i {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: var(--font-color);
+    font-size: 80px;
+}
+
+.contact .github h3 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: rgb(219, 219, 219);
+}
+
+
+/*Monstserrat*/
